@@ -1,12 +1,12 @@
 package org.molgenis.annotation.cmd;
 
 import org.molgenis.CommandLineOnlyConfiguration;
-import org.molgenis.annotation.cmd.conversion.EffectStructureConverter;
 import org.molgenis.annotation.cmd.data.CmdLineDataService;
 import org.molgenis.annotation.cmd.data.CmdLineSettingsEntity;
 import org.molgenis.annotation.cmd.utils.VcfValidator;
 import org.molgenis.data.*;
 import org.molgenis.data.annotation.core.effects.EffectsMetaData;
+import org.molgenis.data.annotation.core.utils.EffectStructureConverter;
 import org.molgenis.data.annotation.core.utils.JarRunnerImpl;
 import org.molgenis.data.convert.DateToStringConverter;
 import org.molgenis.data.convert.StringToDateConverter;
