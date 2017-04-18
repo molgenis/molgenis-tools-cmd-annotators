@@ -224,7 +224,7 @@ public class CmdLineDataService implements DataService
 
 	@Override
 	public Stream<String> getEntityTypeIds() {
-		return null;
+		throw new UnsupportedOperationException();
 	}
 
 	@Override
