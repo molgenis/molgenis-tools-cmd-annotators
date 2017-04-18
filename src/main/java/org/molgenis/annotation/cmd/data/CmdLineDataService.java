@@ -55,12 +55,6 @@ public class CmdLineDataService implements DataService
 	}
 
 	@Override
-	public EntityType getEntityTypeById(String entityId)
-	{
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
 	public long count(String entityName)
 	{
 		throw new UnsupportedOperationException();
@@ -229,14 +223,7 @@ public class CmdLineDataService implements DataService
 	}
 
 	@Override
-	public Stream<String> getEntityNames()
-	{
-		throw new UnsupportedOperationException();
-	}
-
-	@Override
-	public Stream<Object> getEntityIds()
-	{
+	public Stream<String> getEntityTypeIds() {
 		throw new UnsupportedOperationException();
 	}
 
