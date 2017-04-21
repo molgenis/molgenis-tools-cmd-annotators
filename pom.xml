@@ -6,35 +6,30 @@
     <groupId>org.molgenis</groupId>
     <version>4.0.0</version>
     <modelVersion>4.0.0</modelVersion>
-
-    <properties>
-        <molgenis.dependency>4.0.0</molgenis.dependency>
-    </properties>
-
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data-annotators</artifactId>
-            <version>${molgenis.dependency}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data</artifactId>
-            <version>${molgenis.dependency}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data</artifactId>
-            <version>${molgenis.dependency}</version>
+            <version>${project.version}</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-test</artifactId>
-            <version>${molgenis.dependency}</version>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
