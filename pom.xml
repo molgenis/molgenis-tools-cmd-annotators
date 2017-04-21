@@ -4,9 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <artifactId>commandline-annotators</artifactId>
     <groupId>org.molgenis</groupId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0</version>
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+        <molgenis.dependency>4.0.0</molgenis.dependency>
+    </properties>
 
     <packaging>jar</packaging>
 
@@ -14,24 +17,24 @@
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data-annotators</artifactId>
-            <version>4.0.0-SNAPSHOT</version>
+            <version>${molgenis.dependency}</version>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data</artifactId>
-            <version>4.0.0-SNAPSHOT</version>
+            <version>${molgenis.dependency}</version>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data</artifactId>
-            <version>4.0.0-SNAPSHOT</version>
+            <version>${molgenis.dependency}</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-test</artifactId>
-            <version>4.0.0-SNAPSHOT</version>
+            <version>${molgenis.dependency}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
