@@ -7,31 +7,30 @@
     <version>5.0.0</version>
     <modelVersion>4.0.0</modelVersion>
 
-
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data-annotators</artifactId>
-            <version>5.0.0</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data</artifactId>
-            <version>5.0.0</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-data</artifactId>
-            <version>5.0.0</version>
+            <version>${project.version}</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.molgenis</groupId>
             <artifactId>molgenis-test</artifactId>
-            <version>5.0.0</version>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -40,7 +39,6 @@
             <version>4.9</version>
         </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
@@ -78,12 +76,10 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.2</version>
+                    <version>3.6.1</version>
                     <configuration>
                         <source>1.8</source>
                         <target>1.8</target>
-                        <!--useIncrementalCompilation a workaround for "endPosTable already set"-->
-                        <useIncrementalCompilation>false</useIncrementalCompilation>
                         <compilerArguments>
                             <Xlint/>
                         </compilerArguments>
@@ -92,6 +88,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-
 </project>
