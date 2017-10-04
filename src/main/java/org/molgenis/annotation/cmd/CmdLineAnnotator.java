@@ -50,25 +50,22 @@ public class CmdLineAnnotator
 	private static final String USER_HOME = "user.home";
 
 	@Autowired
-	CommandLineAnnotatorConfig commandLineAnnotatorConfig;
-
-	@Autowired
 	private ApplicationContext applicationContext;
 
 	@Autowired
-	VcfValidator vcfValidator;
+	private VcfValidator vcfValidator;
 
 	@Autowired
-	VcfAttributes vcfAttributes;
+	private VcfAttributes vcfAttributes;
 
 	@Autowired
-	EffectStructureConverter effectStructureConverter;
+	private EffectStructureConverter effectStructureConverter;
 
 	@Autowired
-	EntityTypeFactory entityTypeFactory;
+	private EntityTypeFactory entityTypeFactory;
 
 	@Autowired
-	AttributeFactory attributeFactory;
+	private AttributeFactory attributeFactory;
 
 	// Default settings for running vcf-validator
 	private void run(OptionSet options, OptionParser parser) throws Exception
@@ -313,7 +310,7 @@ public class CmdLineAnnotator
 	 * @param annotators
 	 * @return
 	 */
-	static String printAnnotatorsPerType(Map<String, RepositoryAnnotator> annotators)
+	private static String printAnnotatorsPerType(Map<String, RepositoryAnnotator> annotators)
 	{
 		Map<AnnotatorInfo.Type, List<String>> annotatorsPerType = new HashMap<>();
 		for (String annotator : annotators.keySet())
@@ -350,7 +347,7 @@ public class CmdLineAnnotator
 	 * @param configuredAnnotators
 	 * @return
 	 */
-	static HashMap<String, RepositoryAnnotator> getFreshAnnotators(
+	private static HashMap<String, RepositoryAnnotator> getFreshAnnotators(
 			Map<String, RepositoryAnnotator> configuredAnnotators)
 	{
 		HashMap<String, RepositoryAnnotator> configuredFreshAnnotators = new HashMap<>();
