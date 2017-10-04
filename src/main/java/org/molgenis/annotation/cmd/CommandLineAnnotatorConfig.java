@@ -1,6 +1,5 @@
 package org.molgenis.annotation.cmd;
 
-import org.molgenis.CommandLineOnlyConfiguration;
 import org.molgenis.annotation.cmd.data.CmdLineDataService;
 import org.molgenis.annotation.cmd.data.CmdLineSettingsEntity;
 import org.molgenis.annotation.cmd.utils.VcfValidator;
@@ -8,7 +7,6 @@ import org.molgenis.data.*;
 import org.molgenis.data.annotation.core.effects.EffectsMetaData;
 import org.molgenis.data.annotation.core.utils.EffectStructureConverter;
 import org.molgenis.data.annotation.core.utils.JarRunnerImpl;
-import org.molgenis.data.convert.DateToStringConverter;
 import org.molgenis.data.convert.StringToDateConverter;
 import org.molgenis.data.meta.EntityTypeDependencyResolver;
 import org.molgenis.data.meta.model.*;
@@ -35,7 +33,6 @@ import static com.google.common.collect.Lists.newArrayList;
  * Commandline-specific annotator configuration.
  */
 @Configuration
-@CommandLineOnlyConfiguration
 @Import({ RootSystemPackage.class, EntityPopulator.class, AutoValuePopulator.class, DefaultValuePopulator.class,
 		IdGeneratorImpl.class, EntityFactoryRegistry.class, EntityTypeMetadata.class, EntityTypeFactory.class,
 		AttributeMetadata.class, AttributeFactory.class, PackageMetadata.class, PackageFactory.class, TagMetadata.class,
@@ -43,13 +40,13 @@ import static com.google.common.collect.Lists.newArrayList;
 public class CommandLineAnnotatorConfig
 {
 	@Autowired
-	ApplicationContext applicationContext;
+	private ApplicationContext applicationContext;
 
 	@Autowired
-	EntityTypeFactory entityTypeFactory;
+	private EntityTypeFactory entityTypeFactory;
 
 	@Autowired
-	AttributeFactory attributeFactory;
+	private AttributeFactory attributeFactory;
 
 	@PostConstruct
 	public void bootstrap()
@@ -107,7 +104,6 @@ public class CommandLineAnnotatorConfig
 	ConversionService conversionService()
 	{
 		DefaultConversionService registry = new DefaultConversionService();
-		registry.addConverter(new DateToStringConverter());
 		registry.addConverter(new StringToDateConverter());
 		return registry;
 	}
